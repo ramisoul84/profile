@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Righteous&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+aside{
+    position:fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width:200px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 15px;
+    box-shadow:1px 1px 10px whitesmoke;
+    background-color: #040b14;
+    transition: all ease-in-out 0.5s;
+    z-index: 3;
+}
+.profile img{
+    margin: 15px auto;
+    display: block;
+    width: 150px;
+    height:150px;
+    border: 3px solid whitesmoke;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.profile h1{
+    font-family: 'Righteous', cursive;
+    font-size: 30px;
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 5px;
+}
+/* ======== Nav Bar======= */
+.nav-bar{
+    display: grid;
+    grid-template-columns:  200px;
+    place-items: center;
+    margin-top: 10px;
+}
+.list{
+    height:30px;
+    width:30px;
+    padding:4px;
+    margin:5px ;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+.nav-bar p{
+    height:30px;
+    width:200px;
+    padding:4px;
+    margin:5px ;
+    color:#040b14;
+    text-shadow: 1px 1px 1px whitesmoke,-1px -1px 1px whitesmoke;
+    text-align: center;
+    font-size: 40px;
+    display: none;
+}
+
+.nav-bar img.active{
+    background-color: rgb(0, 127, 212);
+}
+.nav-bar img:hover{
+    outline: 2px solid whitesmoke;
+}
+.social-links{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+    left:0;
+    bottom:0;
+    width:200px;
+}
+.social-links img{       
+    height: 25px;
+    margin: 3px;
+    cursor: pointer;
+    background-color: whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+}
+
+
+
+/* ======== Main======= */
+main{
+    background-color:rgba(4, 104, 161, 0.6);
+    box-sizing: border-box;
+    width:100%;
+    height: 100vh;
+    color: black;
+    padding:25px;
+    padding-left: 275px;
+}
+.home{
+    position: fixed;
+    left:0;
+    width:120vw;
+    top:0;
+    bottom: 0;
+    z-index: -1;
+}
+#home p{
+    font-size: 40px;
+    font-family: 'roboto',arial;
+}
+@media (max-width:1200px){
+    aside{
+        left:-200px;
+    }
+    main{
+        padding-left: 25px;
+    }
+
+}
+/* ================= About ================== */
+#about{
+    display: none;
+    font-family:'roboto';
+    
+
+}
+.sec1{
+    background-color: whitesmoke;
+    width:100%;
+    font-family:'anton';
+    font-size: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    animation: sec1-ani 2s forwards;
+    margin-left: -1200px;;
+}
+
+.sec2{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    animation: sec2-ani 2s forwards;
+    animation-delay: 2s;
+    margin-top: -1000px;
+}
+.pic img{
+    height:200px;
+    margin: 25px;
+    border-radius: 10px;
+}
+.details{
+    margin: 25px;
+    
+    font-size: 24px;
+    margin-left: -50px;
+}
+@keyframes sec1-ani{
+    100%{
+        margin-left:0;
+    }
+}
+@keyframes sec2-ani{
+    100%{
+
+        margin-top:0;
+    }
+}
+
+/* ================= Resume ================== */
+#resume{
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    font-family: 'roboto';
+}
+.res-sec{
+    width:100%;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    padding: 30px;
+    animation: res-ani 2s forwards;
+    overflow: hidden;
+    margin-left: -1500px; 
+}
+@keyframes res-ani{
+    100%{
+
+        margin-left:0;
+    }
+}
+/* ================= Skills ================== */
+#skills{
+    display:none;     
+}
+.skills-title{
+    display: flex;
+    align-items: center;
+}
+.skills-title img{
+    display: inline;
+    height:40px;
+    margin-right:20px;   
+}
+.skills-title p{
+    font-family: 'anton', cursive;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;   
+    gap: 5px;
+                  
+}
+.grid-item{
+    background-color: whitesmoke; 
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+
+}
+.skill-logo img{
+    height:100%;
+    padding: 5px;
+}
+.skill-detail{
+    width: 100%;
+    padding: 5px;
+}
+.skill-text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+}
+.skill-text :last-child{
+    text-align: right;
+    padding-right: 5px;
+}
+.container{
+    position: relative;
+    height:10px;
+    border: 2px solid #040b14;
+    border-radius: 5px;
+}
+.level{       
+        width: 0;
+        height: 100%;
+        border: 2px solid #040b14;
+        background-color:#040b14;
+        
+}
+.html{
+    animation: html-fill 2s forwards;
+}
+@keyframes html-fill{
+    100%{
+        width: 60%;
+    }
+}
+.css{
+    animation: css-fill 2s forwards;
+}
+@keyframes css-fill{
+    100%{
+        width: 40%;
+    }
+}
+.js{
+    animation: js-fill 2s forwards;
+}
+@keyframes js-fill{
+    100%{
+        width: 70%;
+    }
+}
+.c{
+    animation: c-fill 2s forwards;
+}
+@keyframes c-fill{
+    100%{
+        width: 50%;
+    }
+}
+.sql{
+    animation: c-fill 2s forwards;
+}
+@keyframes sql-fill{
+    100%{
+        width: 80%;
+    }
+}
+.ar{
+    animation: ar-fill 2s forwards;
+}
+@keyframes ar-fill{
+    100%{
+        width: 100%;
+    }
+}
+.en{
+    animation: en-fill 2s forwards;
+}
+@keyframes en-fill{
+    100%{
+        width: 60%;
+    }
+}
+
+
+
+
+
+
